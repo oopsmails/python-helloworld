@@ -1,0 +1,218 @@
+
+==> Python
+
+PyCharm
+
+oopsmails@gmail.com
+
+
+C:\Users\aaa\AppData\Local\Programs\Python\Python36-32\Scripts\;
+C:\Users\aaa\AppData\Local\Programs\Python\Python36-32\
+
+
+pip install flask
+
+-- Could not install packages due to an EnvironmentError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Max retries exceeded with url: ....
+
+-- Try to run this command from the system terminal. Make sure that you use the correct version of 'pip' installed for your Python interpreter located at
+'D:\GitHub\python-helloworld\venv\Scripts\python.exe'.
+
+python -m pip install --upgrade pip
+
+pip --cert /etc/ssl/certs/FOO_Root_CA.pem install linkchecker
+
+pip --cert /etc/ssl/certs/FOO_Root_CA.pem install flask
+
+--> Not Working!!!!
+pip install --trusted-host pypi.python.org linkchecker
+
+--> Working!!!
+pip install --trusted-host files.pythonhosted.org flask
+
+pip install --trusted-host files.pythonhosted.org numpy
+pip install --trusted-host files.pythonhosted.org tensorflow
+
+
+Requirement already satisfied: flask in c:\users\aaa\appdata\local\programs\python\python36-32\lib\site-packages
+Requirement already satisfied: Werkzeug>=0.14 in c:\users\aaa\appdata\local\programs\python\python36-32\lib\site-pac
+kages (from flask)
+
+
+--> Using PyCharm
+
+Go to File --> Settings --> Project: name_of_the_project --> Project Interpreter. Choose (double click) the package you want to update and the Available Packages will pop-up. There is a checkbox Options on the lower-left part of the window. Check that and enter --trusted-host option and hit the Install Package button.
+
+--trusted-host files.pythonhosted.org
+
+
+
+http://localhost:5000
+
+http://localhost:5000/api/people
+
+http://localhost:5000/api/ui --> swagger
+
+
+-------------------------------------------------------------------------------------
+
+--> upgrade pip
+python -m pip install --upgrade pip --> not working
+
+
+d:\programs\python36\python.exe -m pip install --trusted-host files.pythonhosted.org pip==18.1
+
+--
+
+d:\programs\python\python37-32\python.exe -m pip install --trusted-host files.pythonhosted.org pip==18.1
+
+
+--> install tensorflow
+python -m pip install tensorflow --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org
+
+
+
+
+
+
+d:\programs\python37\python.exe -m pip install tensorflow --trusted-host files.pythonhosted.org --trusted-host pypi.org --trusted-host pypi.python.org
+
+
+
+-------------------------------------------------------------------------------------
+
+--> tensorflow: till 20181212, only supports 3.6.7, not 3.7 yet
+
+pip install --trusted-host files.pythonhosted.org tensorflow
+
+py -m pip install tensorflow
+
+
+
+-------------------------------------------------------------------------------------
+
+Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+
+
+pip install tensorflow-auto-detect
+
+-------------------------------------------------------------------------------------
+
+--> tensorflow: till 20181212, only supports 3.6.7, not 3.7 yet
+
+python-3.6.7-amd64.exe
+Anaconda3-4.3.1-Windows-x86_64.exe --> when installing, "Register Anacoda as my default Python3.6"
+
+
+
+====> installed anaconda, conda
+
+D:\Programs\Anaconda3\
+
+PyCharm error:
+CondaHTTPError: HTTP None None for url <https://conda.anaconda.org/anaconda-fusion/win-64/repodata.json>
+
+conda config --set ssl_verify no
+
+
+--trusted-host files.pythonhosted.org
+
+
+
+connexion
+https://pypi.python.org/simple
+
+
+
+https://www.codeproject.com/Articles/1228615/Introduction-to-TensorFlow-With-Python-Example
+
+
+conda create -n tensorflow pip python=3.6
+
+activate tensorflow
+
+python -m pip install --upgrade pip
+
+--CPU
+pip install --ignore-installed --upgrade tensorflow
+pip install --trusted-host files.pythonhosted.org --ignore-installed --upgrade tensorflow --> use this if getting SSL error
+
+
+pip install tensorflow-gpu
+pip install --trusted-host files.pythonhosted.org --ignore-installed --upgrade tensorflow-gpu
+
+
+
+####> this will download tensorflow to local pip cache, C:\Users\aaa\AppData\Local\pip\Cache\wheels ...
+
+
+(D:\Programs\Anaconda3) D:\Programs\Anaconda3>pip install --trusted-host files.pythonhosted.org --ignore-installed --upgrade tensorflow
+Collecting tensorflow
+  Downloading https://files.pythonhosted.org/packages/05/cd/c171d2e33c0192b04560ce864c26eba83fed888fe5cd9ded661b2702f2ae/tensorflow-1.12.0-cp36-cp36m-win_amd64.whl (45.9MB)
+    100% |████████████████████████████████| 45.9MB 8.5MB/s
+Collecting termcolor>=1.1.0 (from tensorflow)
+  Downloading https://files.pythonhosted.org/packages/8a
+..........................
+
+Building wheels for collected packages: termcolor, absl-py, gast
+  Running setup.py bdist_wheel for termcolor ... done
+  Stored in directory: C:\Users\aaa\AppData\Local\pip\Cache\wheels\7c\06\54\bc84598ba1daf8f970247f550b175aaaee85f68b4b0c5ab2c6
+  Running setup.py bdist_wheel for absl-py ... done
+  Stored in directory: C:\Users\aaa\AppData\Local\pip\Cache\wheels\18\ea\5e\e36e1b8739e78cd2eba0a08fdc602c2b16a4b263912af8cb64
+  Running setup.py bdist_wheel for gast ... done
+  Stored in directory: C:\Users\aaa\AppData\Local\pip\Cache\wheels\9a\1f\0e\3cde98113222b853e98fc0a8e9924480a3e25f1b4008cedb4f
+Successfully built termcolor absl-py gast
+Installing collected packages: termcolor, setuptools, six, protobuf, numpy, keras-preprocessing, wheel, h5py, keras-applications, astor, absl-py, grpcio, werkzeug, markdown, tensorboard, gast, tensorflow
+Successfully installed absl-py-0.6.1 astor-0.7.1 gast-0.2.0 grpcio-1.17.0 h5py-2.8.0 keras-applications-1.0.6 keras-preprocessing-1.0.5 markdown-3.0.1 numpy-1.15.4 protobuf-3.6.1 setuptools-40.6.3 six-1.12.0 tensorboard-1.12.0 tensorflow-1.12.0 termcolor-1.1.0 werkzeug-0.14.1 wheel-0.32.3
+
+
+
+-- GPU
+pip install --ignore-installed --upgrade tensorflow-gpu
+
+
+####> Then in PyCharm, Project Interpreter will be able to add tensorflow!!!
+
+
+-- AttributeError: module 'tensorflow' has no attribute 'data'
+Resolved by updating tensorflow version from 1.2.0 to 1.12.0
+
+
+-- tensorflow.python.framework.errors_impl.InternalError: cudaGetDevice() failed. Status: CUDA driver version is insufficient for CUDA runtime version
+
+nvidia driver problem(?)
+
+
+Conda D:\Programs\Anaconda3\Scripts\conda.exe install -p D:/Programs/Anaconda3/envs/python-helloworld tensorflow-gpu -y
+
+conda.exe install -p D:/Programs/Anaconda3/envs/python-helloworld tensorflow-gpu -y
+
+conda config --set ssl_verify no
+
+
+
+As of conda 4.3, a valid channel must contain a `noarch/repodata.json` and
+associated `noarch/repodata.json.bz2` file, even if `noarch/repodata.json` is
+empty. please request that the channel administrator create
+`noarch/repodata.json` and associated `noarch/repodata.json.bz2` files.
+$ mkdir noarch
+$ echo '{}' > noarch/repodata.json
+$ bzip2 -k noarch/repodata.json
+
+
+-- CondaHTTPError: HTTP 404 NOT FOUND for url <https://pypi.python.org/simple/noarch/repodata.json>
+C:\Users\aaa
+.condarc
+
+::>
+https://pypi.python.org/pypi is not a conda channel.
+conda config --remove channels https://pypi.python.org/pypi
+
+
+-- AttributeError: module 'tensorflow' has no attribute 'feature_column'
+
+
+
+
+
+
+
